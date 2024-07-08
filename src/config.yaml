@@ -1,0 +1,20 @@
+model_config:
+  architecture: 'MobileNetV2'  # Options: 'MobileNetV2', 'MobileNetV3', 'EfficientNet-Lite', 'SqueezeNet'
+  embedding_size: 256
+  pretrained: true
+
+training_config:
+  epochs: 10
+  batch_size: 32
+  learning_rate: 0.001
+  margin: 1.0
+
+dataset_config:
+  root_dir: 'path/to/dataset'
+  # If using multiple datasets, you might configure them like this:
+  datasets:
+    VGGFace2: 'path/to/vggface2'
+    LFW: 'path/to/lfw'
+    CASIA: 'path/to/casia'
+    CelebA: 'path/to/celeba'
+
